@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="blogApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.1/angular.js" data-semver="1.4.1"></script>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.1/angular-animate.js" data-semver="1.4.1"></script>
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.1/angular-aria.js" data-semver="1.4.1"></script>
+    <script data-require="ui-router@0.2.15" data-semver="0.2.15" src="//rawgit.com/angular-ui/ui-router/0.2.15/release/angular-ui-router.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+    <script src="app.js"></script>
+    <script src="versionsCtrl.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl as ctrl" layout="row">
+    <div layout="row" flex="">
+      <md-sidenav layout="column" class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="true">
+        <md-toolbar>
+          <div class="md-toolbar-tools">Editorial Blog</div>
+        </md-toolbar>
+        <md-content flex="" style="overflow: auto;">
+          <div class="menu-item menu-title md-menu-item">
+            <md-menu-item ng-class="{'dark-bg': item.selected}" ng-repeat="item in ctrl.sections">
+              <md-button ng-click="ctrl.goToSection(item)" ng-class="{'md-light': item.selected}">
+                <md-icon class="material-icons">{{item.icon}}</md-icon>
+                 {{item.name}} 
+                </md-button>
+            </md-menu-item>
+          </div>
+        </md-content>
+      </md-sidenav>
+      <div layout="column" flex="" tabindex="-1" role="main">
+        <md-toolbar layout="column">
+          <div class="md-toolbar-tools" ng-click="openMenu()" flex="" layout="column">
+            {{ctrl.currentSection}}
+          </div>
+        </md-toolbar>
+        
+        
+        
+       <div flex layout-padding ui-view></div>
+        
+      </div>
+    </div>
+  </body>
+
+</html>

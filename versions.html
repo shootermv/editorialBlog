@@ -1,0 +1,19 @@
+  <md-content>
+    <md-list layout="column">
+      <md-subheader class="md-no-sticky">versions</md-subheader>
+      <md-divider ></md-divider>
+      
+      <md-whiteframe class="md-whiteframe-z1" ng-repeat="ver in ctrl.todos">
+         <a ui-sref="versions.detail({id:ver.id})"> 
+            <md-list-item layout="row" layout-align="start center">
+              <img ng-src="{{ver.face}}?25" class="md-avatar" alt="{{ver.who}}" />
+              <div class="md-list-item-text">
+                <h3>{{ ver.who }}</h3>
+                <p>Secondary line text Lo.</p>
+              </div>
+            </md-list-item>
+          </a>
+      </md-whiteframe>
+      
+    </md-list>
+  </md-content>

@@ -1,0 +1,21 @@
+/* Put your css in here */
+a:hover md-list-item {
+  background-color: #efefef;
+}
+
+.dark-bg {
+    background-color: #333;
+}
+.dark-bg .md-light, .dark-bg .md-light .material-icons { color: rgba(255, 255, 255, 1); }
+a, a:link, a:visited {
+  color: rgb(63,81,181);
+  display: block;
+  text-decoration: none;
+}
+h3 {
+  margin-bottom: 0;
+}
+p {
+  color: #999;
+  margin-top: 0;
+}
