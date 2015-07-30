@@ -2,9 +2,7 @@ angular.module('blogApp')
 .controller('versionsCtrl',function(){
   var vm = this;
   var imagePath = 'https://material.angularjs.org/latest/img/list/60.jpeg';
-  vm.openDetails = function(ev, id){
-    
-  }
+
   vm.todos = [
       {
         id: '1.0.1',

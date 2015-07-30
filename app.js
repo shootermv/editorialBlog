@@ -17,7 +17,9 @@ app.config(function($mdThemingProvider,$stateProvider, $urlRouterProvider, $mdIc
       url: "/:id",
       views:{
         '@':{
-          templateUrl:"versiondetail.html"
+          templateUrl:"versiondetail.html",
+          controller:'versionDetailCtrl',
+          controllerAs:'ctrl',
         }
       }
     })  
