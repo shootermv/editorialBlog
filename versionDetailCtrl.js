@@ -7,7 +7,8 @@
         .controller('versionDetailCtrl', versionDetailController);
     versionDetailController.$inject = ['$state'];
     function versionDetailController($state) {
-
+         var vm =this;
+         vm.currentVersion = $state.params.id;
     }
 
 })();
